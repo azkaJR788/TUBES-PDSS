@@ -5,5 +5,5 @@ requests
 urllib3
 fiona
 pyproj
-streamlit
 folium
+
