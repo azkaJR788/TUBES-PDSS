@@ -116,7 +116,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_excel("data_disabilitas_1000.xlsx")
+        df = pd.read_csv('data_disabilitas_1000.csv')
         return df
     except Exception as e:
         st.error(f"⚠️ Error memuat file data: {e}")
