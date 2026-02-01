@@ -1,9 +1,6 @@
+streamlit
 pandas
-geopandas
-matplotlib
-requests
-urllib3
-fiona
-pyproj
 folium
-
+streamlit-folium
+matplotlib
+seaborn
