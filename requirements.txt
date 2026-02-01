@@ -4,3 +4,6 @@ folium
 streamlit-folium
 matplotlib
 seaborn
+requests
+beautifulsoup4
+openpyxl
