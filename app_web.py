@@ -293,7 +293,7 @@ if not df_filtered.empty:
         
         with col_chart2:
             # Grafik Bar - Top 10 Wilayah
-            wilayah_counts = df_filtered.groupby('Wilayah')['Jumlah'].sum().sort_values(ascending=False).head(10)
+            wilayah_counts = df_filtered.groupby('Wilayah')['Jumlah_Jiwa'].sum().sort_values(ascending=False).head(10)
             fig_bar = px.bar(
                 x=wilayah_counts.index,
                 y=wilayah_counts.values,
@@ -367,9 +367,9 @@ if not df_filtered.empty:
                         'tipe_counts': {},
                         'records': []
                     }
-                wilayah_aggregated[key]['total'] += row['Jumlah']
+                wilayah_aggregated[key]['total'] += row['Jumlah_Jiwa']
                 wilayah_aggregated[key]['tipe_counts'][row['Tipe_Disabilitas']] = \
-                    wilayah_aggregated[key]['tipe_counts'].get(row['Tipe_Disabilitas'], 0) + row['Jumlah']
+                    wilayah_aggregated[key]['tipe_counts'].get(row['Tipe_Disabilitas'], 0) + row['Jumlah_Jiwa']
                 wilayah_aggregated[key]['records'].append(row)
             
             # Tambahkan marker untuk setiap wilayah
@@ -517,7 +517,7 @@ if not df_filtered.empty:
             show_rows = st.selectbox("Tampilkan baris:", [10, 25, 50, 100, "Semua"])
         with col_view2:
             sort_by = st.selectbox("Urutkan berdasarkan:", 
-                                  ['No', 'Wilayah', 'Tipe_Disabilitas', 'Jumlah', 'Tahun'])
+                                  ['No', 'Wilayah', 'Tipe_Disabilitas', 'Jumlah_Jiwa', 'Tahun'])
         
         # Urutkan data
         df_display = df_filtered.sort_values(by=sort_by, ascending=True)
@@ -532,13 +532,13 @@ if not df_filtered.empty:
         st.markdown("#### 📊 Statistik Ringkasan Data")
         col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
         with col_stat1:
-            st.metric("Rata-rata Jumlah", f"{df_display['Jumlah'].mean():.1f}")
+            st.metric("Rata-rata Jumlah", f"{df_display['Jumlah_Jiwa'].mean():.1f}")
         with col_stat2:
-            st.metric("Jumlah Maksimum", f"{df_display['Jumlah'].max():,}")
+            st.metric("Jumlah Maksimum", f"{df_display['Jumlah_Jiwa'].max():,}")
         with col_stat3:
-            st.metric("Jumlah Minimum", f"{df_display['Jumlah'].min():,}")
+            st.metric("Jumlah Minimum", f"{df_display['Jumlah_Jiwa'].min():,}")
         with col_stat4:
-            st.metric("Standar Deviasi", f"{df_display['Jumlah'].std():.1f}")
+            st.metric("Standar Deviasi", f"{df_display['Jumlah_Jiwa'].std():.1f}")
 
 else:
     st.warning("⚠️ Tidak ada data yang sesuai dengan filter yang dipilih. Silakan sesuaikan filter di sidebar.")
@@ -575,5 +575,6 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
