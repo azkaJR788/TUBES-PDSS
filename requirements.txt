@@ -7,3 +7,4 @@ seaborn
 requests
 beautifulsoup4
 openpyxl
+plotly
