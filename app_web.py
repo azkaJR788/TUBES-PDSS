@@ -568,13 +568,10 @@ st.markdown("""
         <p style="font-size: 0.9em; margin-bottom: 10px;">
             <strong>Disclaimer:</strong> Data ini bersifat dinamis dan dapat berubah sesuai dengan pembaruan dari sumber terkait.
         </p>
-        <p style="text-align: center; font-size: 0.9em;">
-            © 2024 Pemerintah Provinsi Jawa Barat | Dashboard Disabilitas v2.0 | 
-            <span style="color: #FFEAA7;">Dibuat dengan ❤️ untuk Indonesia Inklusif</span>
-        </p>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
