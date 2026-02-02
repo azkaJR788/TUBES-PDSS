@@ -244,7 +244,7 @@ with col2:
     ''', unsafe_allow_html=True)
 
 with col3:
-    total_jumlah = df_filtered['Jumlah'].sum()
+    total_jumlah = df_filtered['Jumlah_Jiwa'].sum()
     st.markdown(f'''
     <div class="metric-card">
         <div class="metric-label">Total Kasus</div>
@@ -575,4 +575,5 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
