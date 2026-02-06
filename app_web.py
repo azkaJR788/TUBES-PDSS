@@ -552,7 +552,7 @@ st.markdown("""
         <div style="flex: 1; min-width: 250px; padding: 15px;">
             <h4>📂 Open Data Jawa Barat</h4>
             <p>Portal data terpadu Pemerintah Provinsi Jawa Barat untuk transparansi dan inovasi kebijakan publik.</p>
-            <p style="font-size: 0.9em;">Sumber data: Opedata.jabarprov 2023-2024</p>
+            <p style="font-size: 0.9em;">Sumber data: Opendata.jabarprov 2023-2024</p>
         </div>
         <div style="flex: 1; min-width: 200px; padding: 15px;">
             <h4>📞 Kontak & Dukungan</h4>
@@ -571,6 +571,7 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
